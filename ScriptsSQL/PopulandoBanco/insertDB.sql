@@ -90,3 +90,13 @@ INSERT INTO Avaliacao_Venda (VendaID, Nota) VALUES (1, 5), (2, 4);
 
 INSERT INTO Lote_Estoque (ProdutoID, CompraItemID, NumeroLote, QuantidadeRecebida, QuantidadeAtual, LocalArmazenamento) 
 VALUES (3, 2, 'LOTE-NOTE-001', 10, 10, 'SALA-SEGURA-01');
+
+INSERT INTO Venda (ClienteID, VendedorID, DataVenda, StatusVenda) 
+VALUES (2, 2, CURRENT_TIMESTAMP, 'Concluída');
+
+INSERT INTO Venda_Item (VendaID, ProdutoID, Quantidade, PrecoUnitarioVenda)
+VALUES (LAST_INSERT_ID(), 3, 1.000, 4500.00);
+
+UPDATE Lote_Estoque 
+SET QuantidadeAtual = QuantidadeAtual - 1 
+WHERE ProdutoID = 3 LIMIT 1;
