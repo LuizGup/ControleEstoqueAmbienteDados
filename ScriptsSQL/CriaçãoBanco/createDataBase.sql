@@ -179,12 +179,3 @@ CREATE TABLE Avaliacao_Venda (
     Comentario TEXT,
     DataAvaliacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-CREATE TABLE Preco_Historico (
-    PrecoID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    ProdutoID INT UNSIGNED NOT NULL,
-    ValorVenda DECIMAL(10, 2) NOT NULL,
-    DataInicioVigencia DATE NOT NULL,
-    DataFimVigencia DATE NULL, -- NULL indica que é o preço atual vigente
-    UsuarioID_Modificacao INT UNSIGNED NOT NULL
-);

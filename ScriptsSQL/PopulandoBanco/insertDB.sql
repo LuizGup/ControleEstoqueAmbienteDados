@@ -87,3 +87,6 @@ INSERT INTO Rastreamento (EntregaID, Localizacao, Status) VALUES
 
 -- 9. AVALIAÇÕES
 INSERT INTO Avaliacao_Venda (VendaID, Nota) VALUES (1, 5), (2, 4);
+
+INSERT INTO Lote_Estoque (ProdutoID, CompraItemID, NumeroLote, QuantidadeRecebida, QuantidadeAtual, LocalArmazenamento) 
+VALUES (3, 2, 'LOTE-NOTE-001', 10, 10, 'SALA-SEGURA-01');

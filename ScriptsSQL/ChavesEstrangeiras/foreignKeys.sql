@@ -42,9 +42,3 @@ ALTER TABLE Entrega ADD CONSTRAINT fk_entrega_transportadora FOREIGN KEY (Transp
 ALTER TABLE Rastreamento ADD CONSTRAINT fk_rastreamento_entrega FOREIGN KEY (EntregaID) REFERENCES Entrega(EntregaID);
 
 ALTER TABLE Avaliacao_Venda ADD CONSTRAINT fk_avaliacao_venda FOREIGN KEY (VendaID) REFERENCES Venda(VendaID);
-
-ALTER TABLE Preco_Historico ADD CONSTRAINT fk_preco_produto
-    FOREIGN KEY (ProdutoID) REFERENCES Produto(ProdutoID);
-
-ALTER TABLE Preco_Historico ADD CONSTRAINT fk_preco_usuario
-    FOREIGN KEY (UsuarioID_Modificacao) REFERENCES Usuario(UsuarioID);
